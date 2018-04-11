@@ -35,12 +35,14 @@
             white-space: nowrap;
         }
     </style>
+    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyB_L3-lPfjCwkS8WzKlCQDh_NbNtRhneq8&signed_in=true&libraries=drawing,geometry"></script>
 </head>
 
 <body>
 
 
     <div id="map"></div>
+    <br>
 
     <div align="left" style="padding-left: 50px;">
 
@@ -51,8 +53,8 @@
             window.onload = function () {
 
                 var btn = document.querySelector("#btn").onclick = function () {
-                    
-    /***************  TRATAMENTO PARA SÓ ACEITAR A LINHA DO TEXTAREA COM VALORES, LINHAS EM BRANCO SERAO IGNORADAS   *******************/
+
+                    /***************  TRATAMENTO PARA SÓ ACEITAR A LINHA DO TEXTAREA COM VALORES, LINHAS EM BRANCO SERAO IGNORADAS   *******************/
                     str = [];
                     var textarea = document.querySelector("#textarea");
                     var valores = textarea.value.split('\n');
@@ -74,13 +76,43 @@
         </script>
         </head>
 
-        <body>
-            <textarea id="textarea" cols="40" rows="10"></textarea>
-            <button id="btn">Enviar</button>
-        </body>
+        <center>
+            <table>
+                <td>
+                    <b>
+                        Essa aplicação cria um Polígono
+                        <br> &nbsp;&nbsp; para contagem de Hectares
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; da área desenhada
+                    </b>
+                </td>
+                <td>
+                    *No mínimo 3 codernadas
+                    <br> &nbsp; para criar um Polígono
+                    <br>
+                    <br> *Digite em cada linha do
+                    <br> &nbsp; textarea uma longitude e
+                    <br> &nbsp; latitude
+                    <br>
+                </td>
+                <td>
+                    *Exemplo:
+                    <br> &nbsp; -21.000372, -48.121048
+                    <br> &nbsp; -22.002072, -49.125048
+                    <br> &nbsp; -21.005072, -50.128048
+                </td>
+                <td>
+                    <textarea id="textarea" cols="40" rows="10"></textarea>
+                </td>
+                <td>
+                    <button id="btn" style="height: 80px">Enviar</button>
+                </td>
+            </table>
+
+        </center>
+
 
 </html>
-<script src="https://maps.googleapis.com/maps/api/js?AIzaSyB_L3-lPfjCwkS8WzKlCQDh_NbNtRhneq8&signed_in=true&libraries=drawing,geometry"></script>
+
 <script>
 
     var map;
